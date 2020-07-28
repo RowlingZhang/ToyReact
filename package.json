@@ -1,0 +1,27 @@
+{
+  "name": "toyreact",
+  "version": "1.0.0",
+  "description": "Readme",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RowlingZhang/ToyReact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RowlingZhang/ToyReact/issues"
+  },
+  "homepage": "https://github.com/RowlingZhang/ToyReact#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel-laoder": "0.0.1-security",
+    "webpack": "^3.5.5",
+    "webpack-cli": "^3.3.12"
+  }
+}
