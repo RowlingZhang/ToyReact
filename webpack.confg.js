@@ -1,25 +1,26 @@
-const path = require('path')
-
 module.exports = {
     //指定入口，表示webpack要打包哪个文件
-    entry: path.join(__dirname,'./src/main.js'),
-    //指定出口，表示打包好的文件输出到哪个目录
-    output:{
-        path:path.join(__dirname,'./dist'),
-        //指定输出文件的名称
-        filename:'bundle1.js'
+    entry: {
+        main: './main.js'
     },
     module: {
-        rules: {
-            test: /\.js$/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                    presents: ['@babel/preset-env']
+        rules: [
+            {
+                test: /\.js$/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presents: ['@babel/preset-env'],
+                        plugins: [[
+                            "@babel/plugin-transform-react-jsx",
+                            {pragma:"ToyReact.createElement"}
+                        ]]
+                    }
                 }
             }
-        }
+        ]
     },
+
     mode: 'development',
     optimization: {
         minimize: false
